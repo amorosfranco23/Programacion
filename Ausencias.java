@@ -29,6 +29,6 @@ public class Ausencias {
     System.out.print("Introduce las horas de asusencia del alumno: ");
     numeroHoras= teclado.nextInt();
     
-    
+    System.out.print("Hola");
     }
 }
