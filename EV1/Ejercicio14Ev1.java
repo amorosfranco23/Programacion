@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package programasjulia;
+package Programacion.EV1;
 import java.util.Scanner;
 /**
  *
- * @author amoro
+ * @author amorosfranco23
  */
 public class Ejercicio14Ev1 {
     public static void main (String[] args){
