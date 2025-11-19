@@ -1,4 +1,8 @@
-package Programacion.EV1;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package programas;
 import java.util.Scanner;
 /**
  *
@@ -45,7 +49,7 @@ public class Ejercicio14Ev1 {
             for (int fila = 1; fila <= altura; fila++){
                 for (int c = 1; c <= fila; c++)
                     System.out.print(caracter);
-                System.out.println();
+                System.out.println(); 
             } for (int fila = altura - 1; fila >= 1; fila--){
                 for (int c = 1; c <= fila; c++)
                     System.out.print(caracter);
@@ -69,3 +73,4 @@ public class Ejercicio14Ev1 {
             System.out.println("El numero introducido no corresponde aninguna opcion del menu, vuelvalo a intentar");
 }
 }
+

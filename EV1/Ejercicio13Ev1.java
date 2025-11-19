@@ -1,5 +1,8 @@
-package Programacion.EV1;
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package programas;
 /**
  *
  * @author amorosfranco23
@@ -9,19 +12,19 @@ public class Ejercicio13Ev1 {
         int i = 320;
         
         //FOR
-        for ( i = 320; i >= 160; i -= 20)
-        System.out.println(i);
-        
+        for (i = 320; i >= 160; i -= 20)
+            System.out.println(i);
+         
         //WHILE
-        while(i > 160) {
+        while (i > 160){
             System.out.println(i);
             i -= 20;
-        }
-
+            
         //DO-WHILE
         do {
-            System.out.println(i);
+           System.out.println(i);
             i -= 20;
         } while (i >= 160);
+        }
     }
 }
