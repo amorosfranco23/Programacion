@@ -1,8 +1,8 @@
-package Programacion.TEMA3;
+
 import java.util.Scanner;
 /**
  *
- * @author amoro
+ * @author amorosfranco23
  */
 public class Ejercicio3Tema3 {
     public static void main (String[] args){

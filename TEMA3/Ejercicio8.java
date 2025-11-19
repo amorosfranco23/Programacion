@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package programas;
+
 import java.util.Scanner;
 /**
  *Se define el factorial de un número N como N*(N-1)*(N-2)*.......*3*2*1. Hacer un programa que

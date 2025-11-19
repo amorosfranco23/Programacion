@@ -1,4 +1,4 @@
-package Programacion.TEMA3;
+
 import java.util.Scanner;
 /**
  *
