@@ -9,17 +9,24 @@ public class Ejercicio18Ev1 {
         System.out.print("Introduce un numero: ");
         numero = sc.nextInt();
 
-        int ultimo = copia % 10;
+        for (int digitoBuscado = 0; digitoBuscado <= 9; digitoBuscado++){
+            copia = numero;
+            encontrado = false;
 
-        for (int digitoBuscado = 0; digitoBuscado < 9; digitoBuscado++){
-            while (copia > 0)
-                if (ultimo == digitoBuscado ){
-
+            while (copia > 0){
+                int ultimo = copia % 10;
+                if (ultimo == digitoBuscado) {
                     encontrado = true;
-                }copia = numero; 
-        } 
-
-        System.out.println("Los numeros que aparecen en el numero introducido son: ");
-        System.out.println("Los numeros que no aparecen en el numero introducido son: ");
+                }
+                copia = copia / 10;    
+        }
+    
+        if (encontrado) {
+            System.out.println(digitoBuscado + " aparece");
+        } else {
+            System.out.println(digitoBuscado + " no aparece");
+        }
+            encontrado = false; 
     }
+}
 }
