@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ejercicio18Ev1 {
     public static void main (String[] args){
         Scanner sc = new Scanner (System.in);
-        int numero, copia;
+        int numero, copia = 0;
         boolean encontrado = false;
 
         System.out.print("Introduce un numero: ");
