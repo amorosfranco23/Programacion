@@ -10,22 +10,22 @@ public class Ejercicio10 {
         Scanner sc=new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int num=sc.nextInt();
-       int siguiente=num+1;
-       boolean primo =false;
-       while(!primo){
-           primo=true;
-       
+        int siguiente=num+1;
+        boolean primo =false;
+        while(!primo){
+            primo=true;
+            
         for (int i = 2; i < siguiente; i++) {
             if (siguiente % i == 0) {
                 primo = false;
-           }
+            }
         
-       }
+        }
         if(!primo){
-          siguiente++;
+            siguiente++;
         }
         } System.out.println("El siguiente numero primo es el " + siguiente);
     
-       } 
+        } 
         
     }
