@@ -1,4 +1,3 @@
-package Programacion.TEMA5;
 /**
  * Clase que representa un vehiculo
  */

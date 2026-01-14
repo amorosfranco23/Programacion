@@ -1,4 +1,3 @@
-package Programacion.TEMA5;
 /**
  * Programa de muestra de la clase Coche
  */

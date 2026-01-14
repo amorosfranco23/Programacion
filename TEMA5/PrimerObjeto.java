@@ -1,5 +1,3 @@
-package Programacion.TEMA5;
-
 public class PrimerObjeto {
     static private int CampoUno;
     private int CampoDos;
