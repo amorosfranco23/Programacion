@@ -1,9 +1,19 @@
+/*
+    Crear una clase Empleado con los datos: Nombre y Numero de empleado.
+    Ademas de añadir lso getters y setters necesarios -->
+    Tendrá como metodos leerDatos() para leer por teclado y verDatos()
+    para mostrar en pantalla.
+
+    Author: Julia Amoros
+    fecha: 19012026
+*/
 import java.util.Scanner;
 
-public class Empleado {
+public class Empleado{
     private String nombre;
     private int numeroEmpleado;
 
+    // Constructor con parámetros
     public Empleado (String nombre, int numeroEmpleado) {
         this.nombre = nombre;
         this.numeroEmpleado = numeroEmpleado;
@@ -18,25 +28,26 @@ public class Empleado {
         return numeroEmpleado;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public void setNumeroEmpleado(int numeroEmpleado) {
+    public void setNumeroEmpleado(int numeroEmpleado){
         this.numeroEmpleado = numeroEmpleado;
     }
 
-    public void leerDatos(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduzca el nombre del empleado: ");
+    // Métodos leer y ver datos
+    public void leerdatos(){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Introduce el nombre del empleado: ");
         nombre = sc.nextLine();
 
-        System.out.println("Introduzca el numero del empleado: ");
+        System.out.println("Introduce el numero del empleado: ");
         numeroEmpleado = sc.nextInt();
     }
 
-    public void verDatos() {
-        System.out.println("El nombre del empleado es: " + nombre);
-        System.out.println("El numero del empleado es: " + numeroEmpleado);
+    public void verDatos(){
+        System.out.println("El nombre del empleado es " + nombre);
+        System.out.println("El numero del empleado es " + numeroEmpleado);
     }
 }

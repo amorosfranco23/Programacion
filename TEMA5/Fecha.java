@@ -1,8 +1,8 @@
 public class Fecha {
 // Atributos
-private int dia;
-private int mes;
-private int anio;
+int dia;
+ int mes;
+ int anio;
 
 // Constructor
 public Fecha (int dia, int mes, int anio) {
