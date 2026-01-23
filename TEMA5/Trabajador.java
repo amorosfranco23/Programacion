@@ -11,11 +11,11 @@
 
 
 public class Trabajador {
-    private int id;
+    private int id; // 1 al 100
     private String nombre;
-    private char estadoCivil;
-    private char turno;
-    private int titulacion;
+    private char estadoCivil; // S o C
+    private char turno; // D o N
+    private int titulacion; // 0 a 4
     private int antiguedad;
 
     public Trabajador(int id, String nombre, char estadoCivil, char turno,
