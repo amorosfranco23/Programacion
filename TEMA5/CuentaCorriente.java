@@ -1,7 +1,6 @@
 /**
  * Esta clase representa una cuenta corriente que está formda por un titular, el saldo
- * y el codigo unico por persona. 
- * Con esta clase podemos ingresar dinero y retirarlo.
+ * y el codigo unico por persona. Con esta clase podemos ingresar dinero y retirarlo.
  * @author: Julia Amoros
  * fecha: 20260126
 */
