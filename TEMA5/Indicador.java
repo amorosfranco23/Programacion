@@ -15,16 +15,31 @@ public class Indicador {
     }
 
     public void setValorInicio(int valorInicio){
-        if (valorInicio < 0)
+        if (valorInicio < 0){
             System.out.println("Error: valor erróneo");
-        this.valorInicio = valorInicio;
+            this.valorInicio = 0;
+        }
+        else
+            this.valorInicio = valorInicio;
     }
 
-    public String ImprimirValor(){
-        return "valor: " + valorInicio;
+    public String imprimirValor(){
+        return "Valor: " + valorInicio;
     }
 
-    
+    public int incrementarValor(int cantidad){
+        if (cantidad > 0)
+            valorInicio += cantidad;
+
+        return valorInicio;
+    }
+
+    public int disminuirValor(int cantidad){
+        if ( cantidad > 0)
+            valorInicio -= cantidad;
+
+        return valorInicio;
+    }
 }
 
 
