@@ -9,6 +9,27 @@ public class CuentaCorriente {
     private String titular;
     private float saldo;
     private String codigo;
+    /*  private static CuentaCorriente ultimaCuentaCreada;
+        private Cuentacorriente cuentaAnterior;
+        private boolean validarCodigoUnico = true;
+
+        // en el constructor
+        if ! validar(ultimaCuentaCreada, codigo)
+            //error
+        // asiganmos estado inicial
+        this.codigo = codigo;
+        cuentaAnterior = ultimaCuentaCreada;
+        ultimaCuentaCreada = this;
+
+        private boolean validarCodigoUnico (CuentaCorriente instancia, String codigo){
+        if (instancia == null)
+            return true;
+        else if (codigo.equals(instancia.codigo))
+            return false;
+        else
+            return validarCodigoUnico(instancia.anterior, codigo);
+        }
+    */    
 
     public CuentaCorriente(String titular, float saldo, String codigo){
         this.titular = titular;
@@ -35,15 +56,21 @@ public class CuentaCorriente {
     }
 
     public void setSaldo(float saldo){
-        if (saldo < 0)
+        if (saldo < 0){
             System.out.println("Error: saldo erróneo");
-        this.saldo = saldo;
+            this.saldo = 0;
+        }
+        else 
+            this.saldo = saldo;
     }
 
     public void setCodigo(String codigo){
-        if (codigo.length() != 8)
+        if (codigo.length() != 8){
             System.out.println("Error: código erróneo");
-        this.codigo = codigo;
+            this.codigo = "";
+        }
+        else 
+            this.codigo = codigo;
     }
 
     public double ingresarDinero(double cantidad){
