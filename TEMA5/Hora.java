@@ -59,24 +59,37 @@ public class Hora {
             this.segundos = segundos;
     }
 
-    public void sumarSegundos(){
+    public void sumarSegundos(int segundosParaCalcular){
         int totalSegundos = hora * 3600 + minutos * 60 + segundos;
+        totalSegundos += segundosParaCalcular; // Sumamos los segundos deseados
 
-        int totalHoras = 86400;
+        totalSegundos = totalSegundos % 86400; // Se ajusta al rango de un día 
+
+        if(totalSegundos < 0)       // Si al restar queda negativo
+            totalSegundos += 86400;
+
+        hora = totalSegundos / 3600; // Calcular horas
+        minutos = (totalSegundos % 3600) / 60; // Calcular minutos
+        segundos = totalSegundos % 3600; // Calcular segundos
     }
 
-    public void sumarHoras(){
-        if (hora > 24)
-            hora = hora - 24;
-        else if (hora < 0)
-            hora = hora + 24;
+    public void sumarHoras(int minutosParaCalcular){
+
     }
 
     public void restarHoras(){
-        
+
     }
 
     public String formatoHora(){
-        return hora + ":" + minutos + ":" + segundos;
+        String h = "", m = "" , s = "";
+        if (hora < 10)
+            h = "0" + hora;
+        if (minutos < 10)
+            m = "0" + minutos;
+        if (segundos < 10)
+            s = "0" + segundos;
+        
+        return h + ":" + m + ":" + s;
     }
 }
