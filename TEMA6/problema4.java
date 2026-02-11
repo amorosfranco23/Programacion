@@ -22,6 +22,8 @@ public class problema4 {
             System.out.print(vectorDos[i] + " ");
         }
 
+        System.out.println();
+
         for (int i = 0; i < 10; i++){
             if (vectorUno[i] == vectorDos[i])
                 contador++;
