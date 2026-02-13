@@ -11,16 +11,16 @@ import java.util.Scanner;
     fecha: 19012026
 */
 
-
 public class Empleado{
     private String nombre;
     private int numeroEmpleado;
     private int numeroMatricula;
 
     // Constructor con parámetros
-    public Empleado (String nombre, int numeroEmpleado){
+    public Empleado (String nombre, int numeroEmpleado, int numeroMatricula){
         this.nombre = nombre;
         this.numeroEmpleado = numeroEmpleado;
+        this.numeroMatricula = numeroMatricula;
     }
 
     // Getters y Setters
@@ -32,13 +32,16 @@ public class Empleado{
         return numeroEmpleado;
     }
 
+    public int getNumeroMatricula() {
+        return numeroMatricula;
+    }
+
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
     // Numero empleado modificado para que sea unico
     public void setNumeroEmpleado(int numeroEmpleado){
-
         this.numeroEmpleado = numeroEmpleado;
     }
 
