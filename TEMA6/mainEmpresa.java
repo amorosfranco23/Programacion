@@ -4,7 +4,7 @@ public class mainEmpresa {
     public static void main(String[] args){
         Empresa e1 = new Empresa();
 
-        
+        e1.mostrarEmpleados();
     }
     
 }

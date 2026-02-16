@@ -15,7 +15,7 @@ public class Empresa {
         rellenarEmpleados();
     }
 
-    private void rellenarEmpleados(){
+    public void rellenarEmpleados(){
         String[] nombres = {"Pepe", "Juan", "Miguel"};
         String[] apellidos = {"Gutierrez", "Lopez", "Torres"};
 
@@ -31,8 +31,15 @@ public class Empresa {
 
             int numeroEmpleado = i + 1;
             int numeroMatricula = i + 1;
+
+            empleados[i] = new Empleado(nombreEmpleado, numeroEmpleado, numeroMatricula);
         }
         
+    }
+
+    public void mostrarEmpleados(){
+        for(int i = 0; i < empleados.length; i++)
+            empleados[i].verDatos();
     }
     
 }
