@@ -29,38 +29,48 @@ public class Conjunto {
             return;
         }
 
-        for(int i = 0; i < numEnteros; i++){
-            if (tabla[i] == valor){
+        if (esMiembro(valor)){
                 System.out.println("El elemento ya está en el conjunto");
                 return;}
-        }
 
-        tabla[numEnteros];
+        tabla[numEnteros] = valor;
     }
 
     public void eliminarConjunto(int valor){
-        for (int i = 0; i < numEnteros; i++){
-            if (tabla[i] == valor){
-                tabla[i] = tabla[numEnteros - 1];
-                numEnteros--;
-            }
-        }
+        int posicion = posicion(valor);
+            if(posicion != -1)
+                eliminar(posicion);
+            else
+                System.out.println("Ese elemento no está");
+        
+    }
+
+    private void eliminar (int posicion){
+        for (int i = numEnteros - 1; i > posicion; i--)
+            tabla[i-1] = tabla[i];
+        numEnteros--;
     }
 
     public void copiarConjunto(Conjunto otro){
-        this.numEnteros = otro.numEnteros;
-
         for(int i = 0; i < otro.numEnteros; i++)
-            this.tabla[i] = otro.tabla[i];
+            agregarConjunto(otro.tabla[i]);
     }
 
     public boolean esMiembro(int valor){
-        for (int i = 0; i < numEnteros; i++){
-            if (tabla[i] == valor)
-                return true;
-        }
-        return false;
+        return posicion(valor) != -1;
+    }
 
+/**
+ * determina la posicion de un elemento en el conjunto
+ * @param valor Valor a localizar
+ * @return su posicion si el elemento está en eñ conjunto; -1 si no está.
+ */
+
+    public int posicion(int valor){
+        for (int i = 0; i < numEnteros; i++)
+                if (tabla[i] == valor)
+                    return i;
+                return -1;
     }
 
     public boolean esIgual(Conjunto otro){
