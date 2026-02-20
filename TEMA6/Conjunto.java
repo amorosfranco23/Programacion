@@ -63,7 +63,7 @@ public class Conjunto {
 /**
  * determina la posicion de un elemento en el conjunto
  * @param valor Valor a localizar
- * @return su posicion si el elemento está en eñ conjunto; -1 si no está.
+ * @return su posicion si el elemento está en el conjunto; -1 si no está.
  */
 
     public int posicion(int valor){
