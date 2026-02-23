@@ -52,8 +52,11 @@ public class Conjunto {
     }
 
     public void copiarConjunto(Conjunto otro){
+        if (numEnteros + otro.numEnteros <= tabla.length){
         for(int i = 0; i < otro.numEnteros; i++)
-            agregarConjunto(otro.tabla[i]);
+            agregarConjunto(otro.tabla[i]);}
+        else 
+            System.out.println("El nuevo no cabe");
     }
 
     public boolean esMiembro(int valor){

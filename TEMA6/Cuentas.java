@@ -57,18 +57,17 @@ public class Cuentas {
         return maximo;
     }
 
-    public void mostrarCuentas(String titular[], float saldo[], String codigo[], double maximo){
+    public void mostrarCuentas(double maximo){
 
-        System.out.println("Las cuentas con mayor saldo son: ");
+    System.out.println("Las cuentas con mayor saldo son:");
 
-        for (int i = 0; i < numeroDeCuentas; i++){
-            if (saldos[i] == maximo){
-                System.out.println("Titular:" + titular[i]);
-                System.out.println("Titular:" + saldo[i]);
-                System.out.println("Titular:" + codigo[i]);
-            }
-
+    for (int i = 0; i < numeroDeCuentas; i++){
+        if (cuenta[i].getSaldo() == maximo){
+            System.out.println("Titular: " + cuenta[i].getTitular());
+            System.out.println("Saldo: " + cuenta[i].getSaldo());
+            System.out.println("Codigo: " + cuenta[i].getCodigo());
+            System.out.println("----------------------");
         }
-
+    }
     }
 }
