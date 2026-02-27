@@ -27,8 +27,8 @@ public class Comedor {
             if(MAX_MENUS - menusServidos > numeroDeMenus){
                     pedidos[numeroDePedidos] = new Pedido(numeroDeMenus);
                     for (int i = 0; i < numeroDeMenus(); i++){
-                        plato1 = platos[(int(MAth.random()*6))];
-                        plato2 = platos[(int(MAth.random()*6))];
+                        plato1 = platos[(int(Math.random()*6))];
+                        plato2 = platos[(int(Math.random()*6))];
                         Pedido[numeroDePedidos].annadeMenu(plato1, plato2);}
                     System.out.println("Coste: ", Pedido[numeroDePedidos].precio());
                     System.out.print("Introduce pago: ");
