@@ -7,7 +7,7 @@ public class Jefes extends Empleado {
     String nombreDepartamento;
 
     public Jefes(String nombre, double sueldo, String titulo, String nombreDepartamento){
-        super(nombreDepartamento, sueldo);
+        super(nombre, sueldo);
         this.titulo = titulo;
         this.nombreDepartamento = nombreDepartamento;
     }

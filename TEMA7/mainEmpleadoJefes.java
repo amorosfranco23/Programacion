@@ -16,9 +16,9 @@ public class mainEmpleadoJefes {
 
         for(int i = 0; i < numeroEmpleados; i++){
             System.out.println("Empleado: " + (i+1));
+            sc.nextLine();
             System.out.println("Nombre: ");
             String nombre = sc.nextLine();
-            sc.nextLine();
 
             System.out.print("Sueldo: ");
             double sueldo = sc.nextDouble();
@@ -33,9 +33,9 @@ public class mainEmpleadoJefes {
 
         for(int i = 0; i < numeroJefes; i++){
             System.out.println("Jefe: " + (i+1));
+            sc.nextLine();
             System.out.println("Nombre: ");
             String nombre = sc.nextLine();
-            sc.nextLine();
 
             System.out.print("Sueldo: ");
             double sueldo = sc.nextDouble();
@@ -43,7 +43,6 @@ public class mainEmpleadoJefes {
 
             System.out.print("Titulo: ");
             String titulo = sc.nextLine();
-            sc.nextLine();
 
             System.out.print("Nombre del departamento: ");
             String nombreDepartamento = sc.nextLine();
@@ -52,7 +51,7 @@ public class mainEmpleadoJefes {
         }
 
         mostrarDatosEmpleados(empleados);
-        mostrarDatosEmpleados(jefes);
+        mostrarDatosJefes(jefes);
     }
 
     static void mostrarDatosEmpleados(Empleado empleados[]){
