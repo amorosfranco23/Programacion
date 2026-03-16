@@ -8,14 +8,14 @@ public class Disco {
 
     public Disco (String titulo) {
         if (titulo == null || titulo.isEmpty() )
-            System.out.println("Error: sin titulo");
+            throw new IllegalArgumentException("Vacío en datos");
         this.titulo = titulo;
     }
 
     public Disco (String titulo, float precio, Fecha compra){
         this(titulo); //This tiene que ser la primera sentencia del metodo
         if (precio < 0 || compra == null)
-            System.out.println("Error: datos");
+            throw new IllegalArgumentException("Vacío en datos");
         this.precio = precio;
         this.compra = compra;
     }
@@ -23,7 +23,7 @@ public class Disco {
     public Disco (String titulo, int numeroCanciones, float precio, Fecha compra){
         this(titulo, precio, compra);
         if (numeroCanciones <= 0)
-            System.out.println("Error: sin canciones");
+            throw new IllegalArgumentException("Vacío en datos");
         this.numeroCanciones = numeroCanciones;
     }
 
@@ -65,7 +65,7 @@ public class Disco {
     */
     public void setNumeroCanciones (int numeroCanciones){
         if (numeroCanciones <= 0)
-            System.out.println("Error: sin canciones");
+            throw new IllegalArgumentException("Vacío en datos");
         this.numeroCanciones = numeroCanciones;
     }
 
@@ -75,7 +75,7 @@ public class Disco {
     */
     public void setFecha (Fecha compra){
         if (compra == null)
-            System.out.println("Error: datos");
+            throw new IllegalArgumentException("Vacío en datos");
         this.compra = compra;
     }
 }
