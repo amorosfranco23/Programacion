@@ -29,10 +29,16 @@ public class Empleado{
     }
 
     public void setNombre(String nombre){
+        if (nombre == null){
+            throw new IllegalArgumentException("El nombre no puede estar vacío.");
+        }
         this.nombre = nombre;
     }
 
     public void setNumeroEmpleado(int numeroEmpleado){
+        if (numeroEmpleado < 0){
+            throw new IllegalArgumentException("El numero de empleado no puede ser negativo.");
+        }
         this.numeroEmpleado = numeroEmpleado;
     }
 

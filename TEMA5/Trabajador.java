@@ -20,12 +20,12 @@ public class Trabajador {
 
     public Trabajador(int id, String nombre, char estadoCivil, char turno,
                         int titulacion, int antiguedad) {
-        this.id = id;
-        this.nombre = nombre;
-        this.estadoCivil = estadoCivil;
-        this.turno = turno;
-        this.titulacion = titulacion;
-        this.antiguedad = antiguedad;
+        setId(id);
+        setNombre(nombre);
+        setTitulacion(titulacion);
+        setEstadoCivil(estadoCivil);
+        setTurno(turno);
+        setAntiguedad(antiguedad);
     }
 
     public int getId(){
@@ -52,33 +52,39 @@ public class Trabajador {
         return antiguedad;
     }
 
+    public void setId(int id){
+        if (id < 1 || id > 100)
+            throw new IllegalArgumentException("El identificador no está dentro del rango correcto.");
+        this.id = id;
+    }
+
     public void setNombre(String nombre){
         if (nombre == null || nombre.isEmpty())
-            System.out.println("Error: sin nombre");
+            throw new IllegalArgumentException("El nombre no puede estar vacío.");
         this.nombre = nombre;
     }
 
     public void setTitulacion(int titulacion){
         if (titulacion < 0 || titulacion > 4)
-            System.out.println("Error: titulación errónea");
+            throw new IllegalArgumentException("La titulación no corresponde con ninguna válida.");
         this.titulacion = titulacion;
     }
 
     public void setEstadoCivil(char estadoCivil){
-        if (estadoCivil != 'S' || estadoCivil != 'C')
-            System.out.println("Error: estado invalido");
         this.estadoCivil = estadoCivil;
+        if (estadoCivil != 'S' || estadoCivil != 'C')
+            throw new IllegalArgumentException("El estado no corresponde con ninguno válido.");
     }
 
     public void setTurno(char turno){
         if (turno != 'D' || turno != 'N')
-            System.out.println("Error: turno invalido");
+            throw new IllegalArgumentException("El turno no corresponde con ninguno válido.");
         this.turno = turno;
     }
 
     public void setAntiguedad(int antiguedad){
         if (antiguedad < 0)
-            System.out.println("Error: antigüedad inválida");
+            throw new IllegalArgumentException("La antigüedad no puede ser un valor negativo.");
         this.antiguedad = antiguedad;
     }
 

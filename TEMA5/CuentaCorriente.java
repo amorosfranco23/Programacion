@@ -32,9 +32,9 @@ public class CuentaCorriente {
     */    
 
     public CuentaCorriente(String titular, float saldo, String codigo){
-        this.titular = titular;
-        this.saldo = saldo;
-        this.codigo = codigo;
+        setTitular(titular);
+        setSaldo(saldo);
+        setCodigo(codigo);
     }
 
     public String getTitular(){
@@ -51,14 +51,13 @@ public class CuentaCorriente {
 
     public void setTitular(String titular){
         if (titular == null || titular.isEmpty())
-            System.out.println("Error: sin titular");
+            throw new IllegalArgumentException("Sin titular");
         this.titular = titular;
     }
 
     public void setSaldo(float saldo){
         if (saldo < 0){
-            System.out.println("Error: saldo erróneo");
-            this.saldo = 0;
+            throw new IllegalArgumentException("Saldo erróneo");
         }
         else 
             this.saldo = saldo;
@@ -66,8 +65,7 @@ public class CuentaCorriente {
 
     public void setCodigo(String codigo){
         if (codigo.length() != 8){
-            System.out.println("Error: código erróneo");
-            this.codigo = "";
+            throw new IllegalArgumentException("Código erróneo");
         }
         else 
             this.codigo = codigo;
@@ -83,14 +81,14 @@ public class CuentaCorriente {
         if (cantidad < saldo)
             return true;
         else
-            return false;
+            throw new IllegalArgumentException("Saldo insuficiente.");
     }
 
     public double retirarDinero(double cantidad){
         if (puedoSacar(cantidad) == true)
             saldo -= cantidad;
         else
-            System.out.println("Error: saldo insuficiente.");
+            throw new IllegalArgumentException("Saldo insuficiente.");
             return saldo;
         }
     }
