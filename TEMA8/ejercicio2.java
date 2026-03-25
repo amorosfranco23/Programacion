@@ -1,10 +1,10 @@
 package Programacion.TEMA8;
 import java.util.Scanner;
 
-public class ejercicio2 {
+public class Ejercicio2 {
     private int numero;
 
-    public ejercicio2(int numero){
+    public Ejercicio2(int numero){
         this.numero = numero;
     }
 
