@@ -2,8 +2,8 @@
  * Este programa lee dos numeros enteros, comprueba que el primero es menor o igual al segundo, y si no lo es repite el proceso para que se cumpla. 
  * Calcula la suma de los numeros multiplos de 3 entre A y B, si no hay la suma da 0.
  * 
- * Fecha: 091126
- * Autor: Julia 
+ * Fecha: 20261109
+ * @author: Julia Amoros
  */
 
 import java.util.Scanner;
