@@ -1,6 +1,9 @@
 /**
  * Este programa solicita un entero entre 1 y 10, si está fuera lo volverá a solicitar.
  * Mostrará la tabla de multiplicar desde 1 al 10, ejemplo de formato -> 8 * 2 = 16.
+ * 
+ * Fecha: 20261109
+ * @author: Julia Amoros
  */
 
 import java.util.Scanner;
