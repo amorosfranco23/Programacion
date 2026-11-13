@@ -17,11 +17,11 @@ public class SumaMultiplosIntervalo {
             System.out.print("Introduce el primer numero entero: ");
             A = sc.nextInt();
 
-            System.out.println("Introduce el segundo numero entero: ");
+            System.out.print("Introduce el segundo numero entero: ");
             B = sc.nextInt();
         } while ( A > B );
 
-        for ( int i = A; i <= B; i++) {
+        for ( int i = A + 1 ; i <= B - 1; i++) {
             if ( i % 3 == 0 ) 
                 suma += i;
         }
