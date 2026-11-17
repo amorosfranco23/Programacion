@@ -23,7 +23,7 @@ public class ClasificacionNotas {
             nota = sc.nextDouble();
         } while ( nota < 0 || nota > 10 );
         
-        if ( nota >= 0 && nota < 5 )
+        if ( nota < 5 )
             System.out.println("La calificación es: insuficiente");
         else if ( nota < 6 )
             System.out.println("La calificación es: suficiente");
