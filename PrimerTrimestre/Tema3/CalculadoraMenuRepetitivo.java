@@ -16,71 +16,63 @@ public class CalculadoraMenuRepetitivo {
         double operandoA, operandoB;
 
         do {
-        System.out.println("1. Sumar dos números.");
-        System.out.println("2. Restar dos números.");
-        System.out.println("3. Multiplicar dos números.");
-        System.out.println("4. Dividir dos números.");
-        System.out.println("5. Terminar.");
+            System.out.println("1. Sumar dos números.");
+            System.out.println("2. Restar dos números.");
+            System.out.println("3. Multiplicar dos números.");
+            System.out.println("4. Dividir dos números.");
+            System.out.println("5. Terminar.");
 
-        System.out.print("Introduce la opción que desees: ");
-        opcion = sc.nextInt();
+            System.out.print("Introduce la opción que desees: ");
+            opcion = sc.nextInt();
 
-        switch ( opcion ) {
-            case 1: 
-                System.out.print("Introduce el primer operando de la suma: ");
-                operandoA = sc.nextDouble();
-                System.out.print("Introduce el segundo operando: ");
-                operandoB = sc.nextDouble();
-
-                double suma = operandoA + operandoB;
-                System.out.println("La suma de " + operandoA + " + " + operandoB + " da " + suma);
-                break;
-            case 2:
-                System.out.print("Introduce el primer operando de la resta: ");
-                operandoA = sc.nextDouble();
-                System.out.print("Introduce el segundo operando: ");
-                operandoB = sc.nextDouble();
-
-                double resta = operandoA - operandoB;
-                System.out.println("La resta de " + operandoA + " - " + operandoB + " da " + resta);
-                break;
-            case 3:
-                System.out.print("Introduce el primer operando de la multiplicación: ");
-                operandoA = sc.nextDouble();
-                System.out.print("Introduce el segundo operando: ");
-                operandoB = sc.nextDouble();
-
-                double multiplicacion = operandoA * operandoB;
-                System.out.println("La multiplicación de " + operandoA + " * " + operandoB + " da " + multiplicacion);
-                break;
-            case 4:
-                System.out.print("Introduce el primer operando de la division: ");
-                operandoA = sc.nextDouble();
-                System.out.print("Introduce el segundo operando: ");
-                operandoB = sc.nextDouble();
-
-                if ( operandoB == 0 ) {
-                    System.out.print("Vuelve a introducir el segundo operando, este no puede ser igual a cero: ");
+            switch ( opcion ) {
+                case 1: 
+                    System.out.print("Introduce el primer operando de la suma: ");
+                    operandoA = sc.nextDouble();
+                    System.out.print("Introduce el segundo operando: ");
                     operandoB = sc.nextDouble();
-                }
-                double division = operandoA / operandoB;
-                System.out.println("La division de " + operandoA + " / " + operandoB + " da " + division);
-                break;
-            case 5: 
-                System.out.println("Cerrando la calculadora...");
-                break;
-            default:
-                System.out.println("El valor introducido no está en el menú, vuelve a introducirlo.");
-                System.out.println("1. Sumar dos números.");
-                System.out.println("2. Restar dos números.");
-                System.out.println("3. Multiplicar dos números.");
-                System.out.println("4. Dividir dos números.");
-                System.out.println("5. Terminar.");
 
-                System.out.print("Introduce la opción que desees: ");
-                opcion = sc.nextInt();
-                break;
-        }
-    } while ( opcion != 5 );
+                    double suma = operandoA + operandoB;
+                    System.out.println("La suma de " + operandoA + " + " + operandoB + " da " + suma);
+                    break;
+                case 2:
+                    System.out.print("Introduce el primer operando de la resta: ");
+                    operandoA = sc.nextDouble();
+                    System.out.print("Introduce el segundo operando: ");
+                    operandoB = sc.nextDouble();
+
+                    double resta = operandoA - operandoB;
+                    System.out.println("La resta de " + operandoA + " - " + operandoB + " da " + resta);
+                    break;
+                case 3:
+                    System.out.print("Introduce el primer operando de la multiplicación: ");
+                    operandoA = sc.nextDouble();
+                    System.out.print("Introduce el segundo operando: ");
+                    operandoB = sc.nextDouble();
+
+                    double multiplicacion = operandoA * operandoB;
+                    System.out.println("La multiplicación de " + operandoA + " * " + operandoB + " da " + multiplicacion);
+                    break;
+                case 4:
+                    System.out.print("Introduce el primer operando de la division: ");
+                    operandoA = sc.nextDouble();
+                    System.out.print("Introduce el segundo operando: ");
+                    operandoB = sc.nextDouble();
+
+                    while ( operandoB == 0 ) {
+                        System.out.print("Vuelve a introducir el segundo operando, este no puede ser igual a cero: ");
+                        operandoB = sc.nextDouble();
+                    }
+                    double division = operandoA / operandoB;
+                    System.out.println("La division de " + operandoA + " / " + operandoB + " da " + division);
+                    break;
+                case 5: 
+                    System.out.println("Cerrando la calculadora...");
+                    break;
+                default:
+                    System.out.println("El valor introducido no está en el menú, vuelve a introducirlo.");
+                    break;
+            }
+        } while ( opcion != 5 );
     }
 }
